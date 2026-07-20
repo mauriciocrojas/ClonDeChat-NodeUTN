@@ -10,7 +10,7 @@ Desarrollado como Trabajo Final Integrador para el Centro de e-Learning UTN BA.
 ## 🚀 Despliegue en Producción (Render)
 
 La API se encuentra desplegada y accesible públicamente en:
-**URL Base:** `[https://clondechat-nodeutn.onrender.com](https://clondechat-nodeutn.onrender.com)`
+**URL Base:** `[https://clondechat-nodeutn.onrender.com]`
 
 ### Usuario de Prueba y Datos Reales
 Para facilitar la validación y prueba de los endpoints en el entorno de producción, ya se encuentran registrados los siguientes datos reales en la base de datos:
@@ -32,7 +32,7 @@ Si bien el proyecto corre nativamente en la nube, se puede levantar un entorno d
 
 1. Clonar el repositorio.
 2. Ejecutar `npm install` para instalar dependencias.
-3. Renombrar `.env.example` a `.env` y configurar la URI de MongoDB Atlas (y el puerto si se desea).
+3. Renombrar `.env.example` a `.env`.
 4. Ejecutar `npm run dev` para iniciar el servidor.
 
 ---
@@ -134,24 +134,24 @@ Para evaluar el correcto funcionamiento de la API, se pueden utilizar los siguie
 
 **1. Obtener la lista de usuarios (GET)**
 ~~~bash
-curl [https://clondechat-nodeutn.onrender.com/users](https://clondechat-nodeutn.onrender.com/users)
+curl [https://clondechat-nodeutn.onrender.com/users]
 ~~~
 
 **2. Enviar un nuevo mensaje a la Sala UTN (POST)**
 ~~~bash
-curl -X POST [https://clondechat-nodeutn.onrender.com/messages](https://clondechat-nodeutn.onrender.com/messages) \
+curl -X POST [https://clondechat-nodeutn.onrender.com/messages] \
 -H "Content-Type: application/json" \
 -d "{\"chatId\": \"6a5e55d06a80b0865030574a\", \"userId\": \"6a5e52546a80b08650305747\", \"content\": \"Mensaje de prueba para validar el endpoint desde la corrección.\"}"
 ~~~
 
 **3. Leer el historial de la Sala UTN actualizado (GET)**
 ~~~bash
-curl [https://clondechat-nodeutn.onrender.com/messages/6a5e55d06a80b0865030574a](https://clondechat-nodeutn.onrender.com/messages/6a5e55d06a80b0865030574a)
+curl [https://clondechat-nodeutn.onrender.com/messages/6a5e55d06a80b0865030574a]
 ~~~
 
 ---
 
 ## 🔗 Conexión con el Frontend (React)
 
-Para consumir esta API desde un frontend (ej: React), apuntar la URL base hacia el servidor en Render (`[https://clondechat-nodeutn.onrender.com](https://clondechat-nodeutn.onrender.com)`). 
+Para consumir esta API desde un frontend (ej: React), apuntar la URL base hacia el servidor en Render (`[https://clondechat-nodeutn.onrender.com]`). 
 La API ya cuenta con el middleware `cors` configurado nativamente para habilitar las peticiones de dominios cruzados sin problemas.
